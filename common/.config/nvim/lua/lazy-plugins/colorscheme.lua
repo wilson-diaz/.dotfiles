@@ -5,8 +5,10 @@ return {
     -- change the command in the config to whatever the name of that colorscheme is
     'catppuccin/nvim',
     priority = 1000, -- make sure to load this before all the other start plugins
-    flavour = 'mocha',
-    init = function()
+    opts = {
+      flavour = 'mocha',
+    },
+    config = function()
       -- Load the colorscheme here.
       vim.cmd.colorscheme 'catppuccin'
 
