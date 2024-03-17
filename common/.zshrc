@@ -29,5 +29,5 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # mise
-#eval "$(mise activate zsh)"
+eval "$(mise activate zsh)"
 
