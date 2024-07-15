@@ -209,7 +209,9 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua',
         'goimports',
+        'pyright',
         'ruff',
+        'ruff_lsp',
         'prettierd',
         'jsonlint',
         'yamllint',
