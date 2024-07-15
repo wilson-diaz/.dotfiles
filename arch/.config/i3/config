@@ -52,8 +52,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use brightnessctl to adjust screen backlight
-bindsym XF86MonBrightnessUp exec "brightnessctl  set 50+"
-bindsym XF86MonBrightnessDown exec "brightnessctl  set 50-"
+bindsym XF86MonBrightnessUp exec "brightnessctl set 150+"
+bindsym XF86MonBrightnessDown exec "brightnessctl set 150-"
 
 # Use scrot for screenshots
 bindsym --release $mod+z exec "scrot -s -e 'mv $f ~/Pictures/screenshots'"
@@ -145,7 +145,14 @@ set $ws10 "10"
 # also specifies laptop screen as default if not connected
 set $monlaptop "eDP-1"
 workspace $ws1 output HDMI-1 $monlaptop
+workspace $ws3 output HDMI-1 $monlaptop
+workspace $ws5 output HDMI-1 $monlaptop
+workspace $ws7 output HDMI-1 $monlaptop
+workspace $ws9 output HDMI-1 $monlaptop
 workspace $ws2 output DP-2 $monlaptop
+workspace $ws4 output DP-2 $monlaptop
+workspace $ws6 output DP-2 $monlaptop
+workspace $ws8 output DP-2 $monlaptop
 workspace $ws10 output $monlaptop
 
 # switch to workspace
