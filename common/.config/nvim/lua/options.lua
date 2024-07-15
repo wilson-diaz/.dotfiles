@@ -46,3 +46,6 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 -- preview substitution commands
 vim.opt.inccommand = 'split'
 
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
