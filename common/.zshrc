@@ -12,18 +12,22 @@ alias vim="nvim"
 bindkey -v
 KEYTIMEOUT=25
 
+# path
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:/usr/local/sbin"
+
+export fpath=(
+  "$HOME/.zfunc"
+  "$HOME/.local/share/sheldon/repos/github.com/sindresorhus/pure"
+  $fpath
+)
+
 # default completions
 zstyle :compinstall filename '$HOME/.zshrc'
 autoload -Uz compinit; compinit
 
 # arrow key interface
 zstyle ':completion:*' menu select
-
-# path
-fpath+=(~/.local/share/sheldon/repos/github.com/sindresorhus/pure)
-fpath+=~/.zfunc
-export PATH="$PATH:$HOME/.local/bin"
-export PATH="$PATH:/usr/local/sbin"
 
 # sheldon
 eval "$(sheldon source)"
@@ -35,15 +39,10 @@ zstyle :prompt:pure:path color cyan
 zstyle :prompt:pure:git:branch color green
 zstyle :prompt:pure:prompt:success color yellow
 
-# mise
-eval "$(mise activate zsh)"
+[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
 
-# go
-PATH="$PATH:$HOME/go/bin"
-
-# oc
-if [ $commands[oc] ]; then
-  source <(oc completion zsh)
-  compdef _oc oc
-fi
+# more
+for config_file in ~/.zshrc.d/*.zsh; do
+  source "$config_file"
+done
 
