@@ -39,8 +39,6 @@ zstyle :prompt:pure:path color cyan
 zstyle :prompt:pure:git:branch color green
 zstyle :prompt:pure:prompt:success color yellow
 
-[ -z "$TMUX"  ] && { tmux attach || exec tmux new-session;}
-
 # more
 for config_file in ~/.zshrc.d/*.zsh; do
   source "$config_file"
