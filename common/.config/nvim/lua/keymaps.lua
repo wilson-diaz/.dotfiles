@@ -4,7 +4,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- enter netrw
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<cr>", {silent = true})
 
 -- keep cursor in middle when scrolling half page
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
