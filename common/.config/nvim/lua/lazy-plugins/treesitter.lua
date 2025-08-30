@@ -15,7 +15,10 @@ return {
           'vim', 'vimdoc'
         },
         auto_install = false,
-        highlight = { enable = true },
+        highlight = {
+          enable = true,
+          disable = { "html" }
+        },
         indent = { enable = true },
       }
 
