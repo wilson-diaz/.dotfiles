@@ -150,7 +150,7 @@ return {
           }
         },
 
-        ruff_lsp = {
+        ruff = {
           init_options = {
             settings = {
               args = {},
@@ -158,17 +158,13 @@ return {
           },
           -- use pyright for hover
           on_attach = function(client, bufnr)
-            if client.name == 'ruff_lsp' then
+            if client.name == 'ruff' then
               client.server_capabilities.hoverProvider = false
             end
           end
         },
-        --
-        -- Some languages (like typescript) have entire language plugins that can be useful:
-        --    https://github.com/pmizio/typescript-tools.nvim
-        --
-        -- But for many setups, the LSP (`tsserver`) will work just fine
-        tsserver = {},
+
+        ts_ls= {},
 
         lua_ls = {
           settings = {
@@ -211,7 +207,6 @@ return {
         'goimports',
         'pyright',
         'ruff',
-        'ruff_lsp',
         'prettierd',
         'jsonlint',
         'yamllint',
