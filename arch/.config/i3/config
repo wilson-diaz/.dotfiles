@@ -149,10 +149,10 @@ workspace $ws3 output DP-1-1-6 HDMI-1 $monlaptop
 workspace $ws5 output DP-1-1-6 HDMI-1 $monlaptop
 workspace $ws7 output DP-1-1-6 HDMI-1 $monlaptop
 workspace $ws9 output DP-1-1-6 HDMI-1 $monlaptop
-workspace $ws2 output DP-1-2 DP-2 $monlaptop
-workspace $ws4 output DP-1-2 DP-2 $monlaptop
-workspace $ws6 output DP-1-2 DP-2 $monlaptop
-workspace $ws8 output DP-1-2 DP-2 $monlaptop
+workspace $ws2 output DP-1-2 DP-2 DP-2-2 $monlaptop
+workspace $ws4 output DP-1-2 DP-2 DP-2-2 $monlaptop
+workspace $ws6 output DP-1-2 DP-2 DP-2-2 $monlaptop
+workspace $ws8 output DP-1-2 DP-2 DP-2-2 $monlaptop
 workspace $ws10 output $monlaptop
 
 # switch to workspace
