@@ -49,3 +49,12 @@ vim.opt.inccommand = 'split'
 -- disable netrw
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
+-- folds
+-- show fold indicators in the sign column
+vim.opt.foldcolumn = "1"
+-- keep folds open by default when opening a file
+vim.opt.foldlevel = 99
+-- use treesitter for smarter folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
